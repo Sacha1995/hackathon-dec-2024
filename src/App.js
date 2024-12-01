@@ -9,6 +9,8 @@ import TextModal from "./components/TextModal";
 function App() {
   const [round, setRound] = useState(1);
   const [complete, setComplete] = useState(false);
+  const [intro, setIntro] = useState(true);
+  const [title, setTitle] = useState(true);
 
   console.log(complete);
 
@@ -48,6 +50,17 @@ function App() {
           fontSize={50}
         />
       )}
+      {title && intro === true &&
+      <TextModal
+          title="Welcome to The Best Christmas Game EVER!"
+          text="Start the game by everyone bringing ONE present. Then spin the wheel to chance your luck and win presents. Round 1 ends when all the presents have been taken. The aim of the game is to finish Round 2 with as many presents as possible! Good Luck"
+          onClose={() => {
+            setTitle(false);
+            setIntro(false);
+          }}
+          fontSize={30}
+        />
+        }
     </div>
   );
 }
