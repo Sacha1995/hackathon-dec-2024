@@ -45,7 +45,7 @@ function App() {
           onClose={() => {
             setComplete(false);
           }}
-          fontSize={40}
+          fontSize={50}
         />
       )}
     </div>
