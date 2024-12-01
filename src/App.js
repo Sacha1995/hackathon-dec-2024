@@ -10,8 +10,6 @@ function App() {
   const [round, setRound] = useState(1);
   const [complete, setComplete] = useState(false);
 
-  console.log(complete);
-
   return (
     <div className="App">
       <Title text="The Best Christmas Game EVER!" />

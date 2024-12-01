@@ -1,70 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { Wheel } from "react-custom-roulette";
-import { useState } from "react";
+import ChallengeModal from "./ChallengeModal";
+import { dataRoundOne, dataRoundTwo, challenges } from "../utils/data";
 
 const Spinner = ({ round }) => {
-  const dataRoundOne = [
-    {
-      option: "Take a Present",
-      style: { backgroundColor: "#7E241F" },
-    },
-    {
-      option: "Swap you Present",
-      style: { backgroundColor: "#5F8356" },
-    },
-    {
-      option: "Steal a Present",
-      style: { backgroundColor: "#7E241F" },
-    },
-    {
-      option: "Presents to the right",
-      style: { backgroundColor: "#5F8356" },
-    },
-    {
-      option: "Take a Present",
-      style: { backgroundColor: "#7E241F" },
-    },
-    {
-      option: "Challenge someone",
-      style: { backgroundColor: "#5F8356" },
-    },
-  ];
-
-  const dataRoundTwo = [
-    {
-      option: "Unwrap a Present",
-      style: { backgroundColor: "#7E241F" },
-    },
-    {
-      option: "Swap you Present",
-      style: { backgroundColor: "#608258" },
-    },
-    {
-      option: "Steal a Present",
-      style: { backgroundColor: "#7E241F" },
-    },
-    {
-      option: "Presents to the right",
-      style: { backgroundColor: "#608258" },
-    },
-    {
-      option: "Two people swap",
-      style: { backgroundColor: "#7E241F" },
-    },
-    {
-      option: "Challenge someone",
-      style: { backgroundColor: "#608258" },
-    },
-  ];
-
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(0);
+  const [showChallengeModal, setShowChallengeModal] = useState(false);
+  const [selectedChallenge, setSelectedChallenge] = useState(null);
 
   const handleSpinClick = () => {
     if (!mustSpin) {
-      const newPrizeNumber = Math.floor(Math.random() * dataRoundOne.length);
+      const currentData = round === 1 ? dataRoundOne : dataRoundTwo;
+      const newPrizeNumber = Math.floor(Math.random() * currentData.length);
       setPrizeNumber(newPrizeNumber);
       setMustSpin(true);
+    }
+  };
+
+  const handleStopSpinning = () => {
+    setMustSpin(false);
+
+    const currentData = round === 1 ? dataRoundOne : dataRoundTwo;
+    const landedOption = "Challenge someone";
+    // currentData[prizeNumber].option;
+
+    if (landedOption === "Challenge someone") {
+      const randomChallenge =
+        challenges[Math.floor(Math.random() * challenges.length)];
+      setSelectedChallenge(randomChallenge);
+      setShowChallengeModal(true); // Show the modal
     }
   };
 
@@ -76,9 +41,7 @@ const Spinner = ({ round }) => {
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={round === 1 ? dataRoundOne : dataRoundTwo}
-        onStopSpinning={() => {
-          setMustSpin(false);
-        }}
+        onStopSpinning={handleStopSpinning}
         outerBorderColor="#3E1F15"
         radiusLineColor="#3E1F15"
         textColors={["#ffffff"]}
@@ -86,6 +49,14 @@ const Spinner = ({ round }) => {
       <button className="spin-btn" onClick={handleSpinClick}>
         Spin
       </button>
+
+      {/* Show the challenge modal if one is selected */}
+      {showChallengeModal && selectedChallenge && (
+        <ChallengeModal
+          challenge={selectedChallenge}
+          onClose={() => setShowChallengeModal(false)}
+        />
+      )}
     </>
   );
 };
