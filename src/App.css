@@ -15,8 +15,8 @@
 }
 
 .bhdLno {
-  max-width: 800px !important;
-  max-height: 800px !important;
+  max-width: 500px !important;
+  max-height: 500px !important;
 }
 
 .btnTimer {
@@ -41,6 +41,12 @@ h1 {
 .btns {
   position: fixed;
   bottom: 50px;
+  right: 50px;
+}
+
+.ruleBtn {
+  position: fixed;
+  top: 50px;
   right: 50px;
 }
 
