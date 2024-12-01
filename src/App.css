@@ -19,6 +19,10 @@
   max-height: 800px !important;
 }
 
+.btnTimer {
+  margin-bottom: 10px;
+}
+
 .spin-btn {
   background-color: #7e241f;
   color: white;
@@ -71,7 +75,7 @@ h1 {
   text-align: center;
   border-radius: 10px;
   width: 50vw;
-  max-width: 500px;
+  max-width: 600px;
   border: 5px solid #8f533f;
 }
 
@@ -94,4 +98,11 @@ h1 {
 
 .challengeExplanation {
   font-size: 24px;
+}
+
+.challengeTimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }

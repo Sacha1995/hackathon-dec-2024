@@ -4,7 +4,7 @@ export const dataRoundOne = [
   { option: "Steal a Present", style: { backgroundColor: "#7E241F" } },
   { option: "Presents to the right", style: { backgroundColor: "#5F8356" } },
   { option: "Take a Present", style: { backgroundColor: "#7E241F" } },
-  { option: "Challenge someone", style: { backgroundColor: "#5F8356" } },
+  { option: "Challenge", style: { backgroundColor: "#5F8356" } },
 ];
 
 export const dataRoundTwo = [
@@ -13,7 +13,7 @@ export const dataRoundTwo = [
   { option: "Steal a Present", style: { backgroundColor: "#7E241F" } },
   { option: "Presents to the right", style: { backgroundColor: "#608258" } },
   { option: "Two people swap", style: { backgroundColor: "#7E241F" } },
-  { option: "Challenge someone", style: { backgroundColor: "#608258" } },
+  { option: "Challenge", style: { backgroundColor: "#608258" } },
 ];
 
 export const challenges = [
@@ -32,7 +32,11 @@ export const challenges = [
     explanation:
       "The other players perform a just dance Christmas routine. The spinner gets to choose the best performer. The best performer gets to steal a present.",
     showVideo: true,
-    videosId: [],
+    videosId: [
+      "Ktm-Y_l-ftY?si=mLnTURET05G3QS_f",
+      "MkE85NIP_9g?si=TXyK6OV-x8f1Z15j",
+      "jBsBgkyYB68?si=KN9uYxzG2IZAzZvT",
+    ],
   },
   {
     title: "Pictionary ",

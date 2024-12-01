@@ -22,10 +22,9 @@ const Spinner = ({ round }) => {
     setMustSpin(false);
 
     const currentData = round === 1 ? dataRoundOne : dataRoundTwo;
-    const landedOption = "Challenge someone";
-    // currentData[prizeNumber].option;
+    const landedOption = currentData[prizeNumber].option;
 
-    if (landedOption === "Challenge someone") {
+    if (landedOption === "Challenge") {
       const randomChallenge =
         challenges[Math.floor(Math.random() * challenges.length)];
       setSelectedChallenge(randomChallenge);
