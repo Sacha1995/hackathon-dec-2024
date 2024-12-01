@@ -84,7 +84,7 @@ const Spinner = ({ round }) => {
         textColors={["#ffffff"]}
       />
       <button className="spin-btn" onClick={handleSpinClick}>
-        SPIN
+        Spin
       </button>
     </>
   );

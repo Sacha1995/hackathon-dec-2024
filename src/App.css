@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&display=swap");
+* {
+  font-family: "Satisfy";
+}
 
 .App {
-  font-family: "Manifest";
+  font-family: "Satisfy";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,12 +24,12 @@
   color: white;
   padding: 10px;
   width: 200px;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 10px;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   color: #5f8356;
   text-shadow: 1px 1px 2px black;
 }
@@ -44,6 +46,44 @@ h1 {
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 10px;
+}
+
+.timerContainer {
+  position: fixed;
+  bottom: 30px;
+  left: 50px;
+  font-size: 90px;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  border-radius: 300px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 50vw;
+  max-width: 500px;
+  border: 5px solid #8f533f;
+}
+
+.btnClose {
+  background-color: #5f8356;
+  width: 200px;
+  color: black;
+  font-size: 30px;
+}
+
+.satisfy-regular {
+  font-family: "Satisfy", serif;
+  font-weight: 400;
+  font-style: normal;
 }
