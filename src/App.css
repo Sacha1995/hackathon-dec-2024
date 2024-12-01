@@ -1,5 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Satisfy&display=swap");
 
-.bg {
+.App {
   font-family: "Manifest";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(/public/photo-1545048702-79362596cdc9.avif);
+  background-position: center;
+  background-size: cover;
+}
+
+.bhdLno {
+  max-width: 800px !important;
+  max-height: 800px !important;
+}
+
+.spin-btn {
+  background-color: #7e241f;
+  color: white;
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 50px;
+  color: #5f8356;
+  text-shadow: 1px 1px 2px black;
 }

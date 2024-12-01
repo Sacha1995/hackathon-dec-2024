@@ -6,54 +6,54 @@ const Spinner = () => {
   const dataRoundOne = [
     {
       option: "Take a Present",
-      style: { backgroundColor: "green", textColor: "black" },
+      style: { backgroundColor: "#7E241F" },
     },
     {
       option: "Swap you Present",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#5F8356" },
     },
     {
       option: "Steal a Present",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#7E241F" },
     },
     {
-      option: "Everyone gives a present to the person on their right",
-      style: { backgroundColor: "white", textColor: "black" },
+      option: "Presents to the right",
+      style: { backgroundColor: "#5F8356" },
     },
     {
       option: "Take a Present",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#7E241F" },
     },
     {
-      option: "Give someone a challenge to win a present",
-      style: { backgroundColor: "white", textColor: "black" },
+      option: "Challenge someone",
+      style: { backgroundColor: "#5F8356" },
     },
   ];
 
   const dataRoundTwo = [
     {
       option: "Unwrap a Present",
-      style: { backgroundColor: "green", textColor: "black" },
+      style: { backgroundColor: "#7E241F" },
     },
     {
       option: "Swap you Present",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#493C27" },
     },
     {
       option: "Steal a Present",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#7E241F" },
     },
     {
       option: "Everyone gives a present to the person on their right",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#493C27" },
     },
     {
       option: "Choose two people to to swap presents",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#7E241F" },
     },
     {
       option: "Give someone a challenge to win a present",
-      style: { backgroundColor: "white", textColor: "black" },
+      style: { backgroundColor: "#608258" },
     },
   ];
 
@@ -71,16 +71,21 @@ const Spinner = () => {
   return (
     <>
       <Wheel
+        className="spinner"
+        fontSize={16}
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={dataRoundOne}
         onStopSpinning={() => {
           setMustSpin(false);
         }}
-        backgroundColors={["#3e3e3e", "#df3428"]}
+        outerBorderColor="#3E1F15"
+        radiusLineColor="#3E1F15"
         textColors={["#ffffff"]}
       />
-      <button onClick={handleSpinClick}>SPIN</button>
+      <button className="spin-btn" onClick={handleSpinClick}>
+        SPIN
+      </button>
     </>
   );
 };
