@@ -40,6 +40,12 @@ h1 {
   right: 50px;
 }
 
+.ruleBtn {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+}
+
 .btn {
   background-color: #7e241f;
   color: white;
