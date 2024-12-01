@@ -2,7 +2,7 @@ import React from "react";
 import { Wheel } from "react-custom-roulette";
 import { useState } from "react";
 
-const Spinner = () => {
+const Spinner = ({ round }) => {
   const dataRoundOne = [
     {
       option: "Take a Present",
@@ -37,22 +37,22 @@ const Spinner = () => {
     },
     {
       option: "Swap you Present",
-      style: { backgroundColor: "#493C27" },
+      style: { backgroundColor: "#608258" },
     },
     {
       option: "Steal a Present",
       style: { backgroundColor: "#7E241F" },
     },
     {
-      option: "Everyone gives a present to the person on their right",
-      style: { backgroundColor: "#493C27" },
+      option: "Presents to the right",
+      style: { backgroundColor: "#608258" },
     },
     {
-      option: "Choose two people to to swap presents",
+      option: "Two people swap",
       style: { backgroundColor: "#7E241F" },
     },
     {
-      option: "Give someone a challenge to win a present",
+      option: "Challenge someone",
       style: { backgroundColor: "#608258" },
     },
   ];
@@ -75,7 +75,7 @@ const Spinner = () => {
         fontSize={16}
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
-        data={dataRoundOne}
+        data={round === 1 ? dataRoundOne : dataRoundTwo}
         onStopSpinning={() => {
           setMustSpin(false);
         }}
