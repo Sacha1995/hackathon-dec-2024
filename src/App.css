@@ -112,3 +112,7 @@ h1 {
   align-items: center;
   margin-bottom: 20px;
 }
+
+.unorderedList {
+  list-style: none;
+}

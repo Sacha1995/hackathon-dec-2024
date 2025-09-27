@@ -28,21 +28,31 @@ function App() {
       </div>
    
       {rules === true && <TextModal
-        text="The rules
-                      1. Start from the youngest person in the room
-            2. One person at a time gets to spin a wheel
-            3. What each task means:
-                1. Challenge someone, the person can pick who they want to challenge and the person who is challenged will press the challenge button which will give them a task to perform
-                2. Take a present from the present stack
-                3. Swap your present with someone who already has a present
-                4. Presents to the right, give the present to the person to your right side
-                5. Steal a present, you can steal a present from someone else
-                6. Swap a present with someone who has a present
-                7. Two people swap a present, you can choose two people to swap their presents
-                8. Unwrap a present, you can open you r present.
-            4. When the timer comes to an end swap to the round 2
-            5. When all the presents have been shared"
-          
+            title="The Rules"
+            text={
+           <div>
+        <ul className="unorderedList">
+          <li>- Start from the youngest person in the room</li>
+          <li>- One person at a time gets to spin a wheel</li>
+          <li>
+            What each task means:
+            <ol>
+              <li>Challenge someone: pick who you want to challenge. The challenged person presses the challenge button and gets a task.</li>
+              <li>Take a present from the present stack.</li>
+              <li>Swap your present with someone who already has a present.</li>
+              <li>Presents to the right: give your present to the person on your right.</li>
+              <li>Steal a present: you can steal a present from someone else.</li>
+              <li>Swap a present with someone who has a present.</li>
+              <li>Two people swap a present: choose two people to swap their presents.</li>
+              <li>Unwrap a present: you can open your present.</li>
+            </ol>
+          </li>
+          <li>- When the timer comes to an end, swap to round 2.</li>
+          <li>- When all the presents have been shared.</li>
+        </ul>
+      </div>
+            }
+
         onClose={() => {
           setRules(false);
         }}
